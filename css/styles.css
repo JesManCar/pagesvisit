@@ -1,0 +1,65 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    background-color: rgb(108, 241, 108);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: green;
+    color: white;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contadorVisitas{
+    font-size: 60px;
+    margin: 40px;
+    color: white;    
+    text-shadow: 2px 0 #727272, -2px 0 #727272, 0 2px #727272, 0 -2px #727272,
+    1px 1px #727272, -1px -1px #727272, 1px -1px #727272, -1px 1px #727272;
+  }
+
+  button{
+    padding: 20px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: rgb(175, 255, 175);
+    transition: all 0.2s;
+}
+
+button:hover{
+    color: white;
+    width: 300px;
+    background-color: green;
+    box-shadow: 4px 4px rgba(0, 128, 0, 0.425);
+  }
+
+  #añadir, #restar {
+    width: 80px;
+  }
+
+  #añadir:hover, #restar:hover {
+    width: 100px;
+  }
+
+  #contadorVisitas{
+    min-height: 92px;
+  }

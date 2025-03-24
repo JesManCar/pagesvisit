@@ -7,11 +7,19 @@
     <title>Contador de Visitas</title>
 </head>
 <body>
+  <header>
+    <h1>Contador de Visitas</h1>
+  </header>
   <section class="container">
     <div class="content">
-    <h1>WELCOME</h1>
-    <p>Esta página ha sido visitada <span id="contadorVisitas">0</span> veces.</p>
-    <button id="btnReestablecer">Reestablecer Contador</button>
+    <span id="contadorVisitas">0</span>
+    <button id="reload">Recargar</button>
+    <div>
+      <button id="restar">-100</button>
+      <button id="btnReestablecer">Reestablecer Contador</button>
+      <button id="añadir">+100</button>
+    </div>
+    <button id="eliminar">Eliminar Local Storage</button>
     </div>
   </section>
     
