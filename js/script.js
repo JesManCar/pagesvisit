@@ -5,33 +5,28 @@ const restar = document.getElementById("restar");
 const reload = document.getElementById("reload");
 const eliminar = document.getElementById("eliminar");
 
-if(localStorage.getItem("contador")){
-    localStorage.setItem("contador", parseFloat(localStorage.getItem("contador"))+1);
+function editStorage (modificador){
+    if(localStorage.getItem("contador")){
+        localStorage.setItem("contador", parseFloat(localStorage.getItem("contador"))+modificador);
+    } else {
+        localStorage.setItem("contador",modificador);
+    }
     contadorVisitas.innerText = localStorage.getItem("contador");
-} else {
-    localStorage.setItem("contador",1);
-    contadorVisitas.innerText = 1;
 }
 
+editStorage(1);
+
 btnReestablecer.addEventListener("click", () => {
-    localStorage.setItem("contador", 0)
-    contadorVisitas.innerText = 0;
+    localStorage.removeItem("contador");
+    editStorage(0);
 });
 
 añadir.addEventListener("click", () => {
-    if(localStorage.getItem("contador")){
-        console.log(isNaN(localStorage.getItem("contador")));
-        localStorage.setItem("contador", parseFloat(localStorage.getItem("contador"))+100);
-        contadorVisitas.innerText = localStorage.getItem("contador");
-    }
+    editStorage(100);
 });
 
 restar.addEventListener("click", () => {
-    if(localStorage.getItem("contador")){
-        console.log(isNaN(localStorage.getItem("contador")));
-        localStorage.setItem("contador", parseFloat(localStorage.getItem("contador"))-100);
-        contadorVisitas.innerText = localStorage.getItem("contador");
-    }
+    editStorage(-100);
 });
 
 
